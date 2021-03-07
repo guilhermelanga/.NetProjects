@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EmpresaXModelStoreContainer" CdmEntityContainer="ColaboradoresEntity">
+    <EntitySetMapping Name="Colaboradores">
+      <EntityTypeMapping TypeName="EmpresaXModel.Colaboradores">
+        <MappingFragment StoreEntitySet="Colaboradores">
+          <ScalarProperty Name="Id_Colab" ColumnName="Id_Colab" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Apelido" ColumnName="Apelido" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="BI" ColumnName="BI" />
+          <ScalarProperty Name="NIF" ColumnName="NIF" />
+          <ScalarProperty Name="Morada" ColumnName="Morada" />
+          <ScalarProperty Name="Concelho" ColumnName="Concelho" />
+          <ScalarProperty Name="Distrito" ColumnName="Distrito" />
+          <ScalarProperty Name="Departamento" ColumnName="Departamento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

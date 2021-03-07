@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EmpresaXModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Colaboradores">
+    <Key>
+      <PropertyRef Name="Id_Colab" />
+    </Key>
+    <Property Name="Id_Colab" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="varchar" MaxLength="50" />
+    <Property Name="Apelido" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="BI" Type="varchar" MaxLength="12" />
+    <Property Name="NIF" Type="varchar" MaxLength="9" />
+    <Property Name="Morada" Type="varchar" MaxLength="50" />
+    <Property Name="Concelho" Type="varchar" MaxLength="50" />
+    <Property Name="Distrito" Type="varchar" MaxLength="50" />
+    <Property Name="Departamento" Type="int" />
+  </EntityType>
+  <EntityType Name="Departamento">
+    <Key>
+      <PropertyRef Name="Id_Depart" />
+    </Key>
+    <Property Name="Id_Depart" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="varchar" MaxLength="50" />
+    <Property Name="Descricao" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="EmpresaXModelStoreContainer">
+    <EntitySet Name="Colaboradores" EntityType="Self.Colaboradores" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Departamento" EntityType="Self.Departamento" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

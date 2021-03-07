@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EmpresaXModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Colaboradores">
+    <Key>
+      <PropertyRef Name="Id_Colab" />
+    </Key>
+    <Property Name="Id_Colab" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Apelido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BI" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="NIF" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
+    <Property Name="Morada" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Concelho" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Distrito" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Departamento" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Departamento">
+    <Key>
+      <PropertyRef Name="Id_Depart" />
+    </Key>
+    <Property Name="Id_Depart" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Descricao" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="EmpresaXEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Colaboradores" EntityType="Self.Colaboradores" />
+    <EntitySet Name="Departamento" EntityType="Self.Departamento" />
+  </EntityContainer>
+</Schema>
