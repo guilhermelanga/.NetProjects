@@ -38,6 +38,8 @@ namespace Colaboradores_MVC.Controllers
         // GET: Colaboradores/Create
         public ActionResult Create()
         {
+            var lista = db.Departamento.ToList();
+            ViewBag.ListaDep = lista;
             return View();
         }
 
@@ -66,6 +68,9 @@ namespace Colaboradores_MVC.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Colaboradores colaboradores = db.Colaboradores.Find(id);
+
+            ViewBag.Departamentos = db.Departamento.ToList();
+
             if (colaboradores == null)
             {
                 return HttpNotFound();

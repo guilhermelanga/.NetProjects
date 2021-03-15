@@ -5,36 +5,49 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<section class="wrapper">
+    <div class="row mt">
+        <div class="col-md-12">
+            <div class="content-panel"  style="padding:15px">
+                <h4><i class="fa fa-angle-right"></i> Departamentos</h4><hr><table class="table table-striped table-advance table-hover">
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Nome)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Descricao)
-        </th>
-        <th></th>
-    </tr>
+                    <div class="col-lg-8">
+                        <p>
+                            <button title="Novo" class="btn btn-success btn-sm" onclick="location.href='@Url.Action("Create")'"><i class="fa fa-plus"></i></button>
+                        </p>
+                    </div>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nome)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Descricao)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id_Depart }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id_Depart }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id_Depart })
-        </td>
-    </tr>
-}
+                    <table class="table">
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Nome)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Descricao)
+                            </th>
+                            <th></th>
+                        </tr>
 
-</table>
+                        @foreach (var item in Model)
+                        {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nome)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Descricao)
+                        </td>
+                        <td>
+                            <button title="Detalhes" class="btn btn-success btn-xs" onclick="location.href='@Url.Action("Details", new { id = item.Id_Depart })'"><i class="fa fa-check"></i></button>
+                            <button title="Editar" class="btn btn-primary btn-xs" onclick="location.href='@Url.Action("Edit", new { id = item.Id_Depart })'"><i class="fa fa-pencil"></i></button>
+                            <button title="Apagar" class="btn btn-danger btn-xs" onclick="location.href='@Url.Action("Delete", new { id = item.Id_Depart })'"><i class="fa fa-trash-o"></i></button>
+                        </td>
+                    </tr>
+                        }
+
+                    </table>
+
+            </div>
+        </div>
+</section>
+
