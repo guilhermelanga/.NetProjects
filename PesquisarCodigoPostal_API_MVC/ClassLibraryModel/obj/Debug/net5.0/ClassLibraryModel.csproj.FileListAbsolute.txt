@@ -1,0 +1,11 @@
+C:\Users\guilh\Desktop\.NetProjects\PesquisarCodigoPostal_API_MVC\ClassLibraryModel\bin\Debug\net5.0\ClassLibraryModel.deps.json
+C:\Users\guilh\Desktop\.NetProjects\PesquisarCodigoPostal_API_MVC\ClassLibraryModel\bin\Debug\net5.0\ClassLibraryModel.dll
+C:\Users\guilh\Desktop\.NetProjects\PesquisarCodigoPostal_API_MVC\ClassLibraryModel\bin\Debug\net5.0\ref\ClassLibraryModel.dll
+C:\Users\guilh\Desktop\.NetProjects\PesquisarCodigoPostal_API_MVC\ClassLibraryModel\bin\Debug\net5.0\ClassLibraryModel.pdb
+C:\Users\guilh\Desktop\.NetProjects\PesquisarCodigoPostal_API_MVC\ClassLibraryModel\obj\Debug\net5.0\ClassLibraryModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\guilh\Desktop\.NetProjects\PesquisarCodigoPostal_API_MVC\ClassLibraryModel\obj\Debug\net5.0\ClassLibraryModel.AssemblyInfoInputs.cache
+C:\Users\guilh\Desktop\.NetProjects\PesquisarCodigoPostal_API_MVC\ClassLibraryModel\obj\Debug\net5.0\ClassLibraryModel.AssemblyInfo.cs
+C:\Users\guilh\Desktop\.NetProjects\PesquisarCodigoPostal_API_MVC\ClassLibraryModel\obj\Debug\net5.0\ClassLibraryModel.csproj.CoreCompileInputs.cache
+C:\Users\guilh\Desktop\.NetProjects\PesquisarCodigoPostal_API_MVC\ClassLibraryModel\obj\Debug\net5.0\ClassLibraryModel.dll
+C:\Users\guilh\Desktop\.NetProjects\PesquisarCodigoPostal_API_MVC\ClassLibraryModel\obj\Debug\net5.0\ref\ClassLibraryModel.dll
+C:\Users\guilh\Desktop\.NetProjects\PesquisarCodigoPostal_API_MVC\ClassLibraryModel\obj\Debug\net5.0\ClassLibraryModel.pdb

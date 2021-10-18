@@ -1,0 +1,105 @@
+﻿@{
+    ViewData["Title"] = "Pesquisar";
+}
+
+
+<head>
+
+    <style>
+        section {
+            padding-top: 3%;
+            width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+
+        table, h2 {
+            margin-top: 8%;
+        }
+    </style>
+</head>
+<body>
+    <section class="intro">
+
+        <form method="post">
+            <div class="card">
+                <h2>Pesquisa</h2>
+                <div class="card-body p-4">
+                    <div class="row">
+                        <div class="col-12 mb-4">
+                            <div class="input-group">
+                                <div class="form-outline flex-fill">
+                                    <input type="search" id="query" name="query" class="form-control form-control-lg" placeholder="Insira sua pesquisa" />
+                                </div>
+                                <button type="button" onclick="search();" class="btn btn-primary">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                            <div>
+                                <h6 id="txtQuery"></h6>
+                            </div>
+                            <div></div>
+                            <div>
+                                <table class="table table-striped">
+                                    <tbody id="resultado">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </section>
+</body>
+
+
+<script>
+
+    var novaQuery = []
+    var resultados = document.getElementById("resultado");
+    var numeroDeResultados = document.getElementById("txtQuery");
+
+
+    function search() {
+        var query = document.getElementById("query").value;
+        numeroDeResultados.innerHTML = "A pesquisar...";
+        resultados.innerHTML = "";
+
+        fetch("https://localhost:44373/api/CodigoPostal/" + query, {
+
+        })
+            .then(resposta => resposta.json())
+            .then(data => mostrarDados(data, query))
+
+    }
+
+
+
+    function mostrarDados(data, query) {
+
+        var txtQuery;
+
+        if (data.length == 0) {
+            txtQuery = `Não foram encontrados resultados para "${query}".`
+        } else if (data.length > 20) {
+            txtQuery = `Foram econtrados ${data.length} resultados, refine sua pesquisa.`
+        } else {
+            txtQuery = `Foram encontrados ${data.length} resultados para "${query}".`
+
+            for (const item of data) {
+
+                resultados.innerHTML += `<tr>
+                                        <th>
+                                            <a href="https://www.google.pt/maps/place/${item.codigoPostalString}">${item.codigoPostalString}</a>
+                                        </th>
+                                    </tr>`
+            }
+        }
+
+        numeroDeResultados.innerHTML = txtQuery;
+
+
+    }
+</script>
