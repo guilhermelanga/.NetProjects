@@ -34,7 +34,7 @@ namespace eTickets.Models
 
         [Display(Name = "Movie Image URL")]
         [Required(ErrorMessage = "The movie image URL is required.")]
-        public double MovieImageURL { get; set; }
+        public string MovieImageURL { get; set; }
 
         [ForeignKey("Category")]
         public int? CategoryId { get; set; }
